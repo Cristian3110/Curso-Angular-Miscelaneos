@@ -8,15 +8,14 @@ import { Component, OnInit } from '@angular/core';
     <p>
       Hola mundo desde app.component
     </p>
+    -->
 
     <app-clases></app-clases>
-    <br />
-    <br />
+
     <p [appResaltado]="'blue'">
       Hola Mundo
+      <app-ng-switch></app-ng-switch>
     </p>
-
-    <app-ng-switch></app-ng-switch>
   `,
   styles: [],
 })
