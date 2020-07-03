@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  AfterContentInit,
+  AfterContentChecked,
+  OnDestroy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +18,41 @@ import { Component, OnInit } from '@angular/core';
     -->
 
     <app-clases></app-clases>
-
+    <br /><br />
     <p [appResaltado]="'blue'">
       Hola Mundo
-      <app-ng-switch></app-ng-switch>
     </p>
+
+    <app-ng-switch></app-ng-switch>
   `,
   styles: [],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent
+  implements
+    OnInit,
+    OnChanges,
+    AfterContentInit,
+    AfterContentChecked,
+    OnDestroy {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('OnInit');
+  }
+
+  ngOnChanges() {
+    console.log('OnChanges');
+  }
+
+  ngAfterContentInit() {
+    console.log('aftercontentInit');
+  }
+
+  ngAfterContentChecked() {
+    console.log('afterocntentCheked');
+  }
+
+  ngOnDestroy() {
+    console.log('Ondestroy');
+  }
 }
