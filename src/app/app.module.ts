@@ -8,17 +8,9 @@ import { CssComponent } from './components/css/css.component';
 import { ClasesComponent } from './components/clases/clases.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NgStyleComponent,
-    CssComponent,
-    ClasesComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, NgStyleComponent, CssComponent, ClasesComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
